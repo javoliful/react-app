@@ -32,9 +32,9 @@ module.exports = options => {
           // For remotes (please adjust)
           name: "react",
           library: { type: "var", name: "react" },
-          filename: "remoteEntry.js", // <-- Meta Data
+          filename: "remoteEntry.js", // <-- Meta Data        
           exposes: {
-              './web-components': './app.js',
+              './web-components': './main.js',
           },        
           shared: ["react", "react-dom"]
         }),
@@ -44,7 +44,8 @@ module.exports = options => {
               from: './*.html'
             }
           ]
-        })
+        }),
+       
     ],
     devServer: {
       port: 4204
