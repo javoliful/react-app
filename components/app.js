@@ -4,10 +4,9 @@ import { Routes, Route, Link } from "react-router-dom";
 
 export function App() {
     const reactVersion = require('./../package.json').dependencies['react'];
+   
   return (
     <div className="App">
-        
-
 
     <h1>
       I´m a React Application 
@@ -17,8 +16,8 @@ export function App() {
       React Version: {reactVersion}
     </p>     
       <Routes>
-        <Route path="react" element={<Home />} />
-        <Route path="about" element={<About />} />        
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />        
       </Routes>
     </div>
   );
@@ -32,7 +31,7 @@ function Home() {
           <p>You can do this, I believe in you.</p>
         </main>
         <nav>
-          <Link to="/about">About</Link>
+          <Link to="about">About</Link>
         </nav>
       </>
     );
@@ -49,7 +48,7 @@ function Home() {
           </p>
         </main>
         <nav>
-          <Link to="/react">Home</Link>
+          <Link to="/">Home</Link>
         </nav>
       </>
     );

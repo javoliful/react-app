@@ -38,7 +38,7 @@ module.exports = options => {
           },        
           shared: ["react", "react-dom"]
         }),
-        new CopyWebpackPlugin({
+      new CopyWebpackPlugin({
           patterns: [
             {
               from: './*.html'

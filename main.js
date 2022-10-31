@@ -9,7 +9,7 @@ class Main extends React.Component {
     const reactVersion = require('./package.json').dependencies['react'];
 
     return (
-    <BrowserRouter>
+    <BrowserRouter basename='/react'>
     <App />
   </BrowserRouter>)
   }
